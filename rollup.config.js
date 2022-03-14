@@ -22,7 +22,7 @@ export default {
 			// we'll extract any component CSS out into
 			// a separate file — better for performance
 			css: css => {
-				css.write('client/public/bundle.css');
+				css.write('bundle.css');
 			}
 		}),
     // Tell any third-party plugins that we're building for the browser

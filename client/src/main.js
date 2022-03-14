@@ -6,5 +6,8 @@ const app = new App({
 		name: 'world'
 	}
 });
+// const app = new App({
+// 	target: document.querySelector('#svelte-app')
+// })
 
 export default app;

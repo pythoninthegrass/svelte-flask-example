@@ -1,5 +1,5 @@
 from flask import Flask, send_from_directory
-import random
+from random import randint
 
 app = Flask(__name__)
 
@@ -7,6 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def base():
     return send_from_directory('client/public', 'index.html')
+
 
 # Path for all the static files (compiled JS/CSS, etc.)
 @app.route("/<path:path>")
@@ -16,7 +17,7 @@ def home(path):
 
 @app.route("/rand")
 def hello():
-    return str(random.randint(0, 100))
+    return str(randint(0, 100))
 
 
 if __name__ == "__main__":
